@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+message Response {
+
+	message Retrieve {
+		message AAA {
+			uint64 f1 = 1; // [1]
+			uint64 f3 = 3; // [32]
+		}
+		AAA f1 = 1; // []
+		message Inventory {
+			message Item {
+				uint64 id = 1; // [6]
+				uint64 f2 = 2; // [10]
+				uint64 f3 = 3; // [100000]
+				message AABAD {
+					repeated uint64 f1 = 1; // [2, 2, 2, 2]
+					repeated uint64 f2 = 2; // [1, 1]
+					repeated uint64 f3 = 3; // [18446744073709551606, 10]
+				}
+				repeated AABAD f4 = 4; // []
+			}
+			repeated Item items = 2; // []
+			uint64 f3 = 3; // [6]
+		}
+		Inventory inventory = 2; // []
+		uint64 f3 = 3; // [10]
+	}
+
+	Retrieve retrieve = 3; // []
+}
+
+message Action {
+
+	// 120c0a0441414141120441414141
+	message Login {
+		string username = 1; // ["AAAA"]
+		string password = 2; // ["AAAA"]
+	}
+
+	// 1a020802
+	message Fight {
+		uint64 level = 1; // [2]
+	}
+
+	// 220410011801
+	message Inventory {
+		uint64 retrieve_buy = 1; // 1 == retrieve, 2 == buy
+		uint64 store_sell = 2; // 1 == store, 2 == sell
+		uint64 inventory_id = 3; // zero based
+	}
+
+	// 2a021001
+	message Use {
+		uint64 inventory_id = 2; // zero based
+	}
+
+	Login login = 2;
+	Fight fight = 3;
+	Inventory inventory = 4;
+	Use use = 5;
+
+}
