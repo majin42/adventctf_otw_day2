@@ -99,9 +99,9 @@ fn exploit_loop(
     info!("initial duplication exploit");
     exploit(mitm)?;
 
-    let dup_num = 6;
-    for i in 1..dup_num {
-        info!("[{}/{}] duplication exploit on new shop item", i, dup_num);
+    let dup_num = 5;
+    for i in 0..dup_num {
+        info!("[{}/{}] duplication exploit on new shop item", i + 1, dup_num);
         // buy second item from shop
         mitm.server.send_message(&msg_buy)?;
 

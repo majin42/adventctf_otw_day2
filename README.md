@@ -8,6 +8,7 @@ A more detailed writeup is available here: FIXME
 ## Usage
 
 > note: this challenge is not hosted anymore.
+> But it's sources have been released https://github.com/OverTheWireOrg/advent2019/tree/master/advent-challenges/2019-12-02_rev3
 
 Launch the man in the middle
 ```
