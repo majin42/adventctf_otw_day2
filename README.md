@@ -3,7 +3,7 @@
 Here is the rust code that I used to solve the day2 of the adventctf organized
 by https://overthewire.org/wargames/
 
-A more detailed writeup is available here: FIXME
+A writeup is available here: https://www.synacktiv.com/posts/challenges/advent-ctf-2019-overthewire-day2-writeup.html
 
 ## Usage
 
