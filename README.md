@@ -8,7 +8,7 @@ A writeup is available here: https://www.synacktiv.com/posts/challenges/advent-c
 ## Usage
 
 > note: this challenge is not hosted anymore.
-> But it's sources have been released https://github.com/OverTheWireOrg/advent2019/tree/master/advent-challenges/2019-12-02_rev3
+> But its sources have been released https://github.com/OverTheWireOrg/advent2019/tree/master/advent-challenges/2019-12-02_rev3
 
 Launch the man in the middle
 ```
